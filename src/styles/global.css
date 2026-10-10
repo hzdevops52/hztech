@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f1f5f2;
+  background: #080b09;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --bg: #080b09;
+  --panel: #0d120f;
+  --panel-2: #111914;
+  --line: rgba(203, 225, 208, .11);
+  --text: #f1f5f2;
+  --muted: #929e95;
+  --green: #7be495;
+  --green-2: #37c96b;
+  --content: 1200px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; min-width: 320px; }
+body, button, a { font-family: 'DM Sans', sans-serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+::selection { color: #061008; background: var(--green); }
+.section-shell { width: min(var(--content), calc(100% - 64px)); margin-inline: auto; }
+.text-gradient {
+  color: var(--green);
+  background: linear-gradient(100deg, #a5f3b4 0%, #57dc81 48%, #2fbf70 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-kicker { display: inline-flex; align-items: center; gap: 9px; color: #a5b1a8; font-size: 10px; font-weight: 700; letter-spacing: 1.65px; }
+.section-kicker > span { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px #7be49566; }
+.button-primary, .button-secondary { min-height: 48px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 8px; font-size: 13px; font-weight: 700; transition: transform .2s, background .2s, border-color .2s; }
+.button-primary { background: var(--green); color: #07110a; border: 1px solid var(--green); }
+.button-primary:hover { background: #a0f2b0; transform: translateY(-2px); }
+.button-secondary { background: rgba(255,255,255,.025); border: 1px solid var(--line); color: #e1e8e2; }
+.button-secondary:hover { border-color: #7be49570; background: #102017; transform: translateY(-2px); }
+@media (max-width: 640px) { .section-shell { width: calc(100% - 36px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
