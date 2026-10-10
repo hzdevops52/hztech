@@ -1,0 +1,25 @@
+.navbar {
+  position: sticky; top: 0; z-index: 50; width: 100%; height: 76px;
+  padding: 0 max(32px, calc((100vw - var(--content)) / 2));
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  background: rgba(8, 11, 9, .86); backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(203, 225, 208, .08);
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-size: 18px; font-weight: 800; letter-spacing: -.6px; white-space: nowrap; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #7be49570; border-radius: 9px; background: #173120; color: var(--green); font-size: 13px; letter-spacing: -1px; }
+.brand-period { color: var(--green); }
+.nav-links { display: flex; align-items: center; gap: 34px; margin-left: auto; }
+.nav-links > a:not(.nav-mobile-cta) { color: #a5afa7; font-size: 12px; font-weight: 600; transition: color .2s; }
+.nav-links > a:hover { color: #fff; }
+.nav-cta, .nav-mobile-cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 40px; padding: 0 15px; border-radius: 7px; background: var(--green); color: #07110a; font-size: 12px; font-weight: 700; }
+.nav-mobile-cta, .menu-toggle { display: none; }
+@media (max-width: 760px) {
+  .navbar { height: 68px; padding: 0 18px; gap: 12px; }
+  .nav-cta { margin-left: auto; min-height: 37px; padding-inline: 12px; }
+  .menu-toggle { display: grid; place-items: center; width: 39px; height: 39px; padding: 0; border-radius: 7px; border: 1px solid var(--line); background: #111712; cursor: pointer; }
+  .nav-links { display: none; position: absolute; top: 67px; left: 0; right: 0; margin: 0; padding: 15px 18px 20px; flex-direction: column; align-items: stretch; gap: 0; background: #0a0e0b; border-bottom: 1px solid var(--line); }
+  .nav-links.nav-open { display: flex; }
+  .nav-links > a:not(.nav-mobile-cta) { padding: 14px 5px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .nav-mobile-cta { display: flex; margin-top: 14px; }
+}
+@media (max-width: 400px) { .brand { font-size: 16px; gap: 7px; } .brand-mark { width: 32px; height: 32px; } .nav-cta { font-size: 11px; } }

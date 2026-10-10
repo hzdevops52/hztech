@@ -75,3 +75,8 @@
   .contact-actions .button-primary, .contact-actions .button-secondary { padding-inline: 11px; }
   .footer-bottom { align-items: start; flex-direction: column; }
 }
+
+
+@media (max-width: 640px) {
+  .contact-glow { filter: none; }
+}

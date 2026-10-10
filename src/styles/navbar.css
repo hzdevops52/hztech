@@ -14,6 +14,8 @@
 .nav-cta, .nav-mobile-cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 40px; padding: 0 15px; border-radius: 7px; background: var(--green); color: #07110a; font-size: 12px; font-weight: 700; }
 .nav-mobile-cta, .menu-toggle { display: none; }
 @media (max-width: 760px) {
+  .navbar { backdrop-filter: none; -webkit-backdrop-filter: none; background: #0a0e0b; }
+
   .navbar { height: 68px; padding: 0 18px; gap: 12px; }
   .nav-cta { margin-left: auto; min-height: 37px; padding-inline: 12px; }
   .menu-toggle { display: grid; place-items: center; width: 39px; height: 39px; padding: 0; border-radius: 7px; border: 1px solid var(--line); background: #111712; cursor: pointer; }
