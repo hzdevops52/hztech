@@ -6,6 +6,7 @@ const links = [
   ['Services', '#services'],
   ['Our Work', '#work'],
   ['About', '#about'],
+  ['Request Help', '#request'],
   ['Contact', '#contact']
 ];
 
@@ -14,9 +15,8 @@ export default function Navbar() {
 
   return (
     <header className="navbar">
-      <a className="brand" href="#home" aria-label="HZ TECH home">
-        <span className="brand-mark">HZ</span>
-        <span>TECH<span className="brand-period">.</span></span>
+      <a className="brand" href="#home" aria-label="HZTECHCLOUD home">
+        <span className="brand-hz">HZ</span><span className="brand-name">TECHCLOUD</span>
       </a>
 
       <nav className={`nav-links ${open ? 'nav-open' : ''}`}>

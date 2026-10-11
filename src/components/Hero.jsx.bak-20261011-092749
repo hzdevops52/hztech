@@ -1,0 +1,31 @@
+import React from "react";
+import { MessageCircle } from "lucide-react";
+import ShowcaseCarousel from "./ShowcaseCarousel.jsx";
+
+const WHATSAPP_NUMBER = "923277495256";
+
+export default function Hero() {
+  return (
+    <section className="hero hero-carousel-only" id="home">
+      <div className="hero-carousel-top">
+        <span className="hero-carousel-label">
+          <span className="hero-carousel-status" />
+          Website Designs
+        </span>
+
+        <a
+          className="hero-whatsapp"
+          href={`https://wa.me/${WHATSAPP_NUMBER}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact HZTECHCLOUD on WhatsApp"
+        >
+          <MessageCircle size={17} />
+          WhatsApp
+        </a>
+      </div>
+
+      <ShowcaseCarousel />
+    </section>
+  );
+}

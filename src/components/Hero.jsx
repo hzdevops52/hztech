@@ -1,34 +1,33 @@
 import React from "react";
-import { ArrowDown, ArrowRight, Sparkles } from 'lucide-react';
-import ShowcaseCarousel from './ShowcaseCarousel.jsx';
+import { MessageCircle } from "lucide-react";
+import ShowcaseCarousel from "./ShowcaseCarousel.jsx";
+
+const WHATSAPP_NUMBER = "923277495256";
 
 export default function Hero() {
   return (
-    <section className="hero section-shell" id="home">
-      <div className="hero-grid">
-        <div className="hero-copy">
-          <div className="availability"><span /> DIGITAL SOLUTIONS FOR GROWING BUSINESSES</div>
-          <h1>Good ideas deserve <span className="text-gradient">great technology.</span></h1>
-          <p className="hero-description">
-            We build modern websites, practical business applications, and reliable deployment workflows that help turn your ideas into reality.
-          </p>
-
-          <div className="hero-actions">
-            <a href="#services" className="button-primary">Explore services <ArrowRight size={17} /></a>
-            <a href="#work" className="button-secondary">See what we build <ArrowDown size={16} /></a>
-          </div>
-
-          <div className="hero-trust">
-            <div className="trust-icon"><Sparkles size={17} /></div>
-            <p><b>Built with purpose.</b><span>Designed for real business needs.</span></p>
-          </div>
-        </div>
-
-        <ShowcaseCarousel />
+    <section className="hero hero-fullscreen" id="home">
+      <div className="hero-message">
+        <span className="hero-eyebrow">
+          <span className="hero-status-dot" />
+          HZTECHCLOUD
+        </span>
+        <h1>Grow Your Business Online.</h1>
       </div>
 
-      <div className="hero-bottomline">
-        <span>WEB DEVELOPMENT</span><i /><span>APPLICATIONS</span><i /><span>DEPLOYMENT</span><i /><span>DEVOPS</span>
+      <ShowcaseCarousel />
+
+      <div className="hero-cta-bottom">
+        <a
+          className="hero-whatsapp"
+          href={`https://wa.me/${WHATSAPP_NUMBER}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with HZTECHCLOUD on WhatsApp"
+        >
+          <MessageCircle size={19} />
+          <span>Let's Talk on WhatsApp</span>
+        </a>
       </div>
     </section>
   );

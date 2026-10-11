@@ -30,3 +30,9 @@ jobs:
 
       - name: Build website
         run: npm run build
+
+      - name: Verify production output
+        run: |
+          test -d dist
+          test -s dist/index.html
+          echo "PASS: Production output is ready"
