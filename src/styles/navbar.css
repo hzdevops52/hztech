@@ -98,4 +98,4 @@
   .nav-links > a:not(.nav-mobile-cta) { padding: 14px 5px; border-bottom: 1px solid var(--line); font-size: 14px; }
   .nav-mobile-cta { display: flex; margin-top: 14px; }
 }
-@media (max-width: 400px) { .brand { font-size: 16px; gap: 7px; } .brand-mark { width: 32px; height: 32px; } .nav-cta { font-size: 11px; } }
+@media (max-width: 400px) { .brand { font-size: 16px; gap: 0; } .brand-mark { width: 32px; height: 32px; } .nav-cta { font-size: 11px; } }
