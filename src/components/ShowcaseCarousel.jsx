@@ -116,7 +116,6 @@ export default function ShowcaseCarousel() {
 
   return (
     <div
-      id="work"
       className={`showcase showcase-fullscreen showcase-theme-${item.type}`}
       style={{
         "--showcase-accent": item.colors?.[0] || "#7be495",
