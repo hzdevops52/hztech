@@ -286,3 +286,86 @@
     transform: none;
   }
 }
+
+
+/* Actual website screenshots in the Our Work project cards */
+.work-project-preview {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  aspect-ratio: 16 / 10;
+  background: #101512;
+}
+
+.work-project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 350ms ease;
+}
+
+.work-card:hover .work-project-preview img {
+  transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-project-preview img {
+    transition: none;
+  }
+}
+
+
+/* Project name above the complete, uncropped website screenshot */
+.work-project-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: #101512;
+}
+
+.work-preview-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 22px;
+  text-align: left;
+  border-bottom: 1px solid rgba(123, 228, 149, 0.16);
+}
+
+.work-preview-heading .work-project-category {
+  display: block;
+}
+
+.work-preview-heading h3 {
+  margin: 0;
+}
+
+.work-project-preview img.work-project-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: top center;
+  transform: none;
+  transition: none;
+}
+
+.work-card:hover .work-project-preview img.work-project-screenshot {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-project-preview img.work-project-screenshot {
+    transition: none;
+  }
+}

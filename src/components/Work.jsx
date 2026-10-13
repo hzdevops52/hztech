@@ -4,10 +4,11 @@ import { ArrowUpRight, ShoppingBag, UtensilsCrossed } from "lucide-react";
 const projects = [
   {
     id: "novacart",
+    image: "/images/projects/novacart.png",
     name: "NovaCart",
     category: "E-COMMERCE",
     description:
-      "A modern online storefront experience built to present products clearly and make browsing feel effortless.",
+      "A modern e-commerce storefront for browsing products through a clean, responsive shopping interface.",
     stack: ["Online Store", "Product UI", "Responsive Design"],
     url: "https://hzdevops52.github.io/novacart/",
     icon: ShoppingBag,
@@ -18,10 +19,11 @@ const projects = [
   },
   {
     id: "restoflow",
+    image: "/images/projects/restoflow.png",
     name: "RestoFlow",
     category: "RESTAURANT OPERATIONS",
     description:
-      "A restaurant order-taking interface showcasing a digital workflow for handling customer orders.",
+      "A restaurant order-taking interface designed to help staff handle customer orders efficiently.",
     stack: ["Restaurant UI", "Order Taking", "Operations"],
     url: "https://hzdevops52.github.io/Restoflow/order-taker",
     icon: UtensilsCrossed,
@@ -38,42 +40,19 @@ function ProjectCard({ project, index }) {
   return (
     <article className="work-card">
       <div className={`work-project-preview ${project.previewClass}`}>
-        <div className="work-preview-topbar">
-          <span className="work-preview-brand">
-            <Icon size={15} aria-hidden="true" />
-            {project.name}
-          </span>
-          <span className="work-preview-status">
-            <span />
-            LIVE SHOWCASE
-          </span>
+        <div className="work-preview-heading">
+          <span className="work-project-category">{project.category}</span>
+          <h3>{project.name}</h3>
         </div>
-
-        <div className="work-preview-content">
-          <span className="work-preview-label">{project.previewLabel}</span>
-          <h3>{project.previewTitle}</h3>
-          <p>{project.previewDetail}</p>
-          <div className="work-preview-lines" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
-
-        <span className="work-preview-index">0{index + 1}</span>
+        <img
+          className="work-project-screenshot"
+          src={project.image}
+          alt={`Full-page screenshot of the ${project.name} website`}
+          loading="lazy"
+        />
       </div>
 
       <div className="work-card-body">
-        <div className="work-card-heading">
-          <div>
-            <span className="work-project-category">{project.category}</span>
-            <h3>{project.name}</h3>
-          </div>
-          <span className="work-project-icon" aria-hidden="true">
-            <Icon size={19} />
-          </span>
-        </div>
-
         <p className="work-project-description">{project.description}</p>
 
         <div className="work-project-tags">
