@@ -81,10 +81,12 @@
   .contact-glow { filter: none; }
 }
 
-/* HZTECHCLOUD image-first service cards */
+/* HZTECHCLOUD Services — final card layout, aligned with Our Work */
 .services-grid {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  align-items: stretch;
+  gap: 22px;
   border: 0;
 }
 
@@ -92,22 +94,26 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: 0;
-  padding: 0 0 18px;
+  height: 100%;
+  padding: 0 0 20px;
   overflow: hidden;
+  box-sizing: border-box;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 13px;
   background: #0b100d;
-  transition: border-color .22s, transform .22s, background .22s;
+  transition: transform .22s ease, border-color .22s ease,
+              background .22s ease, box-shadow .22s ease;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  border-color: #00e67670;
+  border-color: #7be49565;
   background: #0e1510;
+  box-shadow: 0 12px 28px #00000020;
 }
 
 .service-image-wrap {
+  flex: 0 0 auto;
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -119,44 +125,83 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .3s ease;
+  transition: transform .35s ease;
 }
 
 .service-card:hover .service-image {
-  transform: scale(1.035);
+  transform: scale(1.04);
 }
 
 .service-card h3 {
-  min-height: 24px;
-  margin: 18px 16px 14px;
+  margin: 20px 20px 10px;
   color: #e8f0e9;
   font-family: Manrope, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.45;
   letter-spacing: -.3px;
+  overflow-wrap: anywhere;
+}
+
+.service-description {
+  margin: 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.85;
+  overflow-wrap: break-word;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 7px;
+  margin: 16px 20px 22px;
+  padding: 0;
+}
+
+.service-tags span {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: #a4b0a6;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  transition: border-color .22s ease, color .22s ease;
+}
+
+.service-card:hover .service-tags span {
+  border-color: #7be49528;
 }
 
 .service-order-button {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   gap: 8px;
   min-height: 43px;
-  margin: auto 16px 0;
+  margin: auto 20px 0;
   padding: 10px 14px;
-  border: 1px solid #00e676;
+  box-sizing: border-box;
+  border: 1px solid var(--green);
   border-radius: 7px;
-  background: #00e676;
-  color: #06110a;
-  font-size: 12px;
+  background: var(--green);
+  color: #07110a;
+  font-size: 11px;
   font-weight: 750;
+  text-align: center;
   text-decoration: none;
-  transition: background .2s, border-color .2s;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 .service-order-button:hover {
-  border-color: #69ffad;
-  background: #69ffad;
+  transform: translateY(-2px);
+  border-color: #a0f2b0;
+  background: #a0f2b0;
 }
 
 .service-order-button:focus-visible {
@@ -167,49 +212,66 @@
 @media (max-width: 900px) {
   .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: 18px;
+  }
+
+  .service-card h3,
+  .service-description,
+  .service-tags {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .service-order-button {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }
 
 @media (max-width: 600px) {
   .services-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
   }
 
   .service-card {
-    border-radius: 9px;
-    padding-bottom: 12px;
+    height: auto;
+    padding-bottom: 16px;
+  }
+
+  .service-image-wrap {
+    aspect-ratio: 16 / 9;
   }
 
   .service-card h3 {
-    min-height: 42px;
-    margin: 12px 10px 10px;
-    font-size: 13px;
+    margin-top: 17px;
+    margin-bottom: 8px;
+  }
+
+  .service-tags {
+    margin-top: 13px;
+    margin-bottom: 18px;
   }
 
   .service-order-button {
-    min-height: 39px;
-    margin-inline: 10px;
-    padding: 8px 6px;
-    gap: 5px;
-    font-size: 11px;
+    min-height: 44px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .service-card,
   .service-image,
-  .service-order-button {
-    transition: none;
+  .service-order-button,
+  .service-tags span {
+    transition: none !important;
   }
 
   .service-card:hover,
-  .service-card:hover .service-image {
-    transform: none;
+  .service-card:hover .service-image,
+  .service-order-button:hover {
+    transform: none !important;
   }
 }
-
 
 /* HZTECHCLOUD problem request form */
 .problem-request-section {
@@ -631,5 +693,113 @@
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+
+/* Services alignment correction */
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.service-card h3 {
+  min-height: 2.9em;
+}
+
+.service-description {
+  min-height: 5.55em;
+  flex: 0 0 auto;
+}
+
+.service-tags {
+  flex: 1 0 auto;
+  align-content: flex-start;
+}
+
+.service-order-button {
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    height: auto;
+  }
+
+  .service-card h3,
+  .service-description {
+    min-height: 0;
+  }
+
+  .service-tags {
+    flex: 0 0 auto;
+  }
+}
+
+
+/* Services descriptions: left-aligned text */
+.services-grid .service-description {
+  text-align: left !important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 900px) {
+  .services-grid .service-description {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+/* Final Services alignment and spacing correction */
+.services-grid .service-card h3 {
+  text-align: center;
+  min-height: 0;
+}
+
+.services-grid .service-description {
+  text-align: left !important;
+  min-height: 0;
+}
+
+.services-grid .service-tags {
+  flex: 0 0 auto;
+  margin-bottom: 18px;
+}
+
+.services-grid .service-card {
+  padding-top: 0;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 600px) {
+  .services-grid .service-card {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+}
+
+
+/* Discuss Project button — smooth arrow hover animation */
+.service-order-button .service-order-arrow {
+  flex: 0 0 auto;
+  transition: transform .22s ease;
+}
+
+.service-order-button:hover .service-order-arrow {
+  transform: translate(3px, -3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-order-button .service-order-arrow {
+    transition: none;
+  }
+
+  .service-order-button:hover .service-order-arrow {
+    transform: none;
   }
 }

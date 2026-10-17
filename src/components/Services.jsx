@@ -28,7 +28,19 @@ const serviceImages = [
   {
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
     alt: "Monitoring dashboard with charts and operational metrics"
-  }
+  },
+  {
+    src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+    alt: "Retail checkout and point-of-sale payment experience"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80",
+    alt: "Website displayed on a laptop for a redesign project"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80",
+    alt: "Mobile devices representing responsive application design"
+  },
 ];
 
 export default function Services() {
@@ -50,7 +62,7 @@ export default function Services() {
       </div>
 
       <div className="services-grid">
-        {services.map(({ number, title }, index) => {
+        {services.map(({ number, title, description, tags }, index) => {
           const image = serviceImages[index];
           const message = `Hello HZTECHCLOUD, I'm interested in your ${title} service. Please share the details.`;
           const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -69,14 +81,22 @@ export default function Services() {
 
               <h3>{title}</h3>
 
+              <p className="service-description">{description}</p>
+
+              <div className="service-tags" aria-label={`${title} technologies and offerings`}>
+                {tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+
               <a
                 href={whatsappUrl}
                 className="service-order-button"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Order ${title} through WhatsApp`}
+                aria-label={`Discuss ${title} through WhatsApp`}
               >
-                Order Now <ArrowUpRight size={16} />
+                Discuss Project <ArrowUpRight className="service-order-arrow" size={16} />
               </a>
             </article>
           );
