@@ -887,3 +887,365 @@
     transform: translateX(-50%) !important;
   }
 }
+
+
+/* Fictional homepage previews: each slide has its own visual identity. */
+.showcase-fullscreen .preview.preview-homepage {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d8dfd8;
+  border-radius: 9px;
+  background: #fff;
+  color: #18231d;
+  opacity: 1 !important;
+  text-align: left;
+  isolation: isolate;
+}
+.preview-homepage .preview-topbar {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 31px;
+  height: 31px;
+  background: #f7f8f6;
+  border-bottom: 1px solid #e6e9e4;
+  color: #344239;
+}
+.preview-homepage .preview-brand { color: #344239; font-size: 9px; }
+.preview-homepage .preview-brand-dot { background: var(--showcase-accent); }
+.preview-homepage .preview-page {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+  font-family: Inter, Arial, sans-serif;
+}
+.preview-homepage .site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 46px;
+  padding: 0 5%;
+  border-bottom: 1px solid #0000000d;
+  font-size: 8px;
+  letter-spacing: .45px;
+}
+.preview-homepage .site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: -.5px;
+}
+.preview-homepage .site-logo i { font-family: Georgia, serif; font-weight: 400; }
+.preview-homepage .site-nav nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(9px, 1.6vw, 23px);
+  color: #5f6a61;
+  font-size: 7px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.preview-homepage .site-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 10px;
+  border: 0;
+  background: #1d3027;
+  color: white;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .35px;
+  white-space: nowrap;
+}
+.preview-homepage .site-hero,
+.preview-homepage .commerce-hero,
+.preview-homepage .business-hero,
+.preview-homepage .pos-hero,
+.preview-homepage .agency-hero {
+  display: grid;
+  align-items: center;
+  height: calc(100% - 46px);
+  min-height: 0;
+  overflow: hidden;
+}
+.preview-homepage .site-hero-copy,
+.preview-homepage .commerce-copy,
+.preview-homepage .business-copy,
+.preview-homepage .pos-copy,
+.preview-homepage .agency-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 18px 0 18px 7%;
+}
+.preview-homepage .site-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #7a6b4f;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+}
+.preview-homepage .site-hero h3,
+.preview-homepage .commerce-hero h3,
+.preview-homepage .business-hero h3,
+.preview-homepage .pos-hero h3,
+.preview-homepage .agency-hero h3 {
+  margin: 0;
+  font-size: clamp(23px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+}
+.preview-homepage .site-hero-copy p,
+.preview-homepage .commerce-copy p,
+.preview-homepage .business-copy p,
+.preview-homepage .pos-copy p,
+.preview-homepage .agency-copy p {
+  max-width: 265px;
+  margin: 10px 0 13px;
+  color: #687168;
+  font-size: 9px;
+  line-height: 1.65;
+}
+.preview-homepage .site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 28px;
+  padding: 0 12px;
+  border: 0;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+.preview-homepage .site-note {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 13px;
+  color: #7a8179;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: .7px;
+}
+.preview-homepage .site-hero-image,
+.preview-homepage .business-photo {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+.preview-homepage .site-hero-image img,
+.preview-homepage .commerce-product img,
+.preview-homepage .business-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.preview-homepage .photo-caption {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 8px;
+  background: #fff;
+  color: #3e493f;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+
+/* Restaurant: warm editorial typography and food photography. */
+.preview-page-restaurant { background: #fbf6ed; }
+.restaurant-nav { color: #3a2c22; background: #fbf6ed; }
+.restaurant-nav .site-logo { font-family: Georgia, serif; font-size: 15px; }
+.restaurant-nav .site-logo i { color: #b7773f; }
+.restaurant-nav .site-nav-cta { background: #7b3f27; }
+.restaurant-hero { grid-template-columns: 1.03fr .97fr; }
+.restaurant-hero .site-hero-copy { padding-right: 8px; }
+.restaurant-hero .site-kicker { color: #a56a39; }
+.restaurant-hero h3 { color: #40291f; font-family: Georgia, serif; font-weight: 500 !important; letter-spacing: -1px !important; }
+.restaurant-hero .site-hero-copy p { color: #76695e; }
+.restaurant-button { background: #8b4b2c; color: white; }
+.restaurant-photo { margin: 12px 12px 12px 0; }
+.restaurant-photo img { border-radius: 3px; }
+
+/* E-commerce: light fashion editorial with real product imagery and PKR pricing. */
+.preview-page-commerce { background: #f6f5ef; }
+.commerce-nav { background: #f6f5ef; }
+.commerce-nav .site-logo { letter-spacing: -1px; }
+.commerce-nav .site-logo span { color: #8a9d4f; }
+.commerce-actions { display: flex; gap: 11px; }
+.commerce-hero { grid-template-columns: .8fr 1.2fr; background: #f6f5ef; }
+.commerce-copy .site-kicker { color: #75824b; }
+.commerce-hero h3 { font-family: Georgia, serif; font-weight: 500 !important; }
+.commerce-hero h3 i { color: #73854b; font-weight: 500; }
+.commerce-button { background: #29352a; color: white; }
+.commerce-products { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; height: 100%; padding: 14px 6% 14px 0; }
+.commerce-product { min-width: 0; color: #2a3029; font-size: 8px; }
+.commerce-product img { height: clamp(115px, 20vh, 200px); background: #e9e8df; }
+.commerce-product b, .commerce-product span { display: block; margin-top: 6px; }
+.commerce-product span { color: #71766d; font-size: 7px; }
+.product-featured { transform: translateY(-5px); }
+
+/* Business services: architectural imagery, confident hierarchy and proof points. */
+.preview-page-business { background: #f4f6f8; }
+.business-nav { background: #fff; }
+.business-nav .site-logo { font-size: 12px; letter-spacing: 1px; }
+.business-nav .site-logo small { display: block; margin-left: 2px; color: #718095; font-size: 6px; letter-spacing: 2px; }
+.business-mark { display: grid; place-items: center; width: 23px; height: 23px; background: #334e70; color: #fff; font-size: 13px; }
+.business-nav .site-nav-cta { background: #334e70; }
+.business-hero { grid-template-columns: 1fr .96fr; background: #f4f6f8; }
+.business-copy .site-kicker { color: #526b8c; }
+.business-hero h3 { color: #182c43; }
+.business-hero h3 i { color: #557aa4; font-family: Georgia, serif; font-weight: 500; }
+.business-button { background: #2e4c6e; color: white; }
+.business-stats { display: flex; gap: 25px; margin-top: 18px; }
+.business-stats span { display: flex; flex-direction: column; gap: 3px; }
+.business-stats b { color: #223b56; font-size: 16px; }
+.business-stats small { color: #6f7d8d; font-size: 6px; letter-spacing: .5px; }
+.business-photo { margin: 12px 12px 12px 0; }
+.business-photo img { border-radius: 2px; }
+.business-photo > span { position: absolute; bottom: 9px; left: 9px; padding: 6px; background: #172b40dd; color: #fff; font-size: 6px; letter-spacing: .7px; }
+
+/* POS software: a product-led landing page with a readable dashboard preview. */
+.preview-page-pos { background: #f5f8f7; }
+.pos-nav { background: #fff; }
+.pos-nav .site-logo { color: #173d35; font-size: 12px; letter-spacing: -.2px; }
+.pos-mark { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: #d9f4e9; color: #17614c; }
+.pos-nav .site-nav-cta { background: #17614c; }
+.pos-hero { grid-template-columns: .78fr 1.22fr; background: radial-gradient(ellipse at 75% 45%, #dcefe7, transparent 65%), #f5f8f7; }
+.pos-copy { padding-right: 5px !important; }
+.pos-copy .site-kicker { color: #28765e; font-size: 6px; }
+.pos-hero h3 { color: #183a31; font-size: clamp(21px, 2.7vw, 36px) !important; }
+.pos-hero h3 i { color: #238265; font-style: normal; }
+.pos-button { background: #17614c; color: white; }
+.pos-dashboard { min-width: 0; margin: 15px 5% 15px 0; padding: 13px; border: 1px solid #dce6e1; border-radius: 8px; background: #fff; box-shadow: 0 12px 28px #183c2a12; }
+.pos-dash-head, .pos-chart-heading, .pos-dash-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pos-dash-head b { font-size: 10px; color: #203b31; }
+.pos-dash-head span, .pos-chart-heading span { color: #89958e; font-size: 7px; }
+.pos-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 12px; }
+.pos-metrics > div { display: flex; flex-direction: column; min-width: 0; gap: 5px; padding: 8px 6px; border: 1px solid #edf1ee; border-radius: 5px; }
+.pos-metrics small { color: #7b8981; font-size: 6px; font-weight: 800; }
+.pos-metrics b { overflow: hidden; color: #213d32; font-size: clamp(9px, 1.2vw, 15px); white-space: nowrap; }
+.pos-metrics em { color: #19805d; font-size: 6px; font-style: normal; }
+.pos-metrics .pos-warning { color: #b77a2e; }
+.pos-chart-heading { margin-top: 13px; }
+.pos-chart-heading b { color: #33483d; font-size: 8px; }
+.pos-bars { display: flex; align-items: end; gap: 5px; height: 72px; margin-top: 9px; padding: 8px 8px 0; border-bottom: 1px solid #e8eeea; background: repeating-linear-gradient(to bottom, transparent 0 19px, #edf2ee 20px 21px); }
+.pos-bars span { flex: 1; min-width: 0; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #54c6a0, #218365); }
+.pos-dash-footer { margin-top: 8px; color: #8b968f; font-size: 6px; }
+.pos-dash-footer span:first-child { display: flex; align-items: center; gap: 4px; }
+.pos-dash-footer i { width: 6px; height: 6px; border-radius: 50%; background: #32a77f; }
+
+/* Digital agency: editorial type, expressive art and service-led messaging. */
+.preview-page-agency { background: #fff8f4; }
+.agency-nav { background: #fff8f4; }
+.agency-nav .site-logo { font-size: 12px; letter-spacing: -.6px; }
+.agency-nav .site-logo span { color: #d66d50; }
+.agency-nav .site-nav-cta { background: #5c3b65; }
+.agency-hero { grid-template-columns: .92fr 1.08fr; background: #fff8f4; }
+.agency-copy .site-kicker { color: #a35e52; }
+.agency-hero h3 { color: #382b3d; font-size: clamp(24px, 3.1vw, 43px) !important; }
+.agency-hero h3 i { color: #b55e50; font-family: Georgia, serif; font-weight: 500; }
+.agency-button { background: #5c3b65; color: white; }
+.agency-services { display: flex; align-items: center; gap: 6px; margin-top: 15px; color: #82727f; font-size: 5px; font-weight: 800; letter-spacing: .4px; white-space: nowrap; }
+.agency-services i { width: 3px; height: 3px; border-radius: 50%; background: #c77763; }
+.agency-art { position: relative; height: 90%; min-height: 0; margin: 3% 6% 3% 0; }
+.agency-art-card { position: absolute; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; border-radius: 4px; }
+.agency-art-card > span { position: relative; z-index: 1; font-size: 6px; font-weight: 800; letter-spacing: .8px; }
+.agency-art-main { inset: 0 22% 8% 0; padding: 14px; background: #ead6e8; color: #4c3655; }
+.agency-art-main b { position: relative; z-index: 1; font-family: Georgia, serif; font-size: clamp(18px, 2.4vw, 31px); font-weight: 500; line-height: 1; }
+.agency-orbit { position: absolute; top: 15%; right: -12%; width: 68%; aspect-ratio: 1; border: 1px solid #a17eaa; border-radius: 50%; }
+.agency-orbit i { position: absolute; top: 14%; left: 15%; width: 70%; height: 70%; border: 1px solid #a17eaa; border-radius: 50%; }
+.agency-orbit i:nth-child(2) { transform: rotate(60deg) scaleX(.6); }
+.agency-orbit i:nth-child(3) { transform: rotate(-60deg) scaleX(.6); }
+.agency-art-side { inset: 25% 0 0 65%; padding: 10px; background: #f2b39f; color: #5c3b3d; }
+.agency-art-side b { font-family: Georgia, serif; font-size: 10px; font-weight: 500; }
+.agency-shapes { display: flex; align-items: center; justify-content: center; gap: 4px; flex: 1; }
+.agency-shapes i { display: block; width: 23px; height: 23px; border-radius: 50% 50% 4px 50%; background: #6d4b75; transform: rotate(-25deg); }
+.agency-shapes i:nth-child(2) { background: #fff0d8; transform: rotate(25deg); }
+.agency-shapes i:nth-child(3) { background: #9e5c57; }
+.agency-art-note { position: absolute; right: 0; bottom: 0; color: #8d6a80; font-size: 6px; font-weight: 800; letter-spacing: .7px; }
+
+@media (max-width: 760px) {
+  .preview-homepage .preview-topbar { flex-basis: 24px; height: 24px; }
+  .preview-homepage .preview-page { height: calc(100% - 24px); }
+  .preview-homepage .site-nav { min-height: 32px; gap: 5px; padding-right: 4%; padding-left: 4%; }
+  .preview-homepage .site-logo { font-size: 9px; }
+  .preview-homepage .site-nav nav { gap: 7px; font-size: 5px; }
+  .preview-homepage .site-nav-cta { padding: 6px; font-size: 5px; }
+  .preview-homepage .site-hero,
+  .preview-homepage .commerce-hero,
+  .preview-homepage .business-hero,
+  .preview-homepage .pos-hero,
+  .preview-homepage .agency-hero { height: calc(100% - 32px); }
+  .preview-homepage .site-hero-copy,
+  .preview-homepage .commerce-copy,
+  .preview-homepage .business-copy,
+  .preview-homepage .pos-copy,
+  .preview-homepage .agency-copy { padding-top: 8px; padding-bottom: 8px; }
+  .preview-homepage .site-kicker { margin-bottom: 5px; font-size: 5px; letter-spacing: .6px; }
+  .preview-homepage .site-hero h3,
+  .preview-homepage .commerce-hero h3,
+  .preview-homepage .business-hero h3,
+  .preview-homepage .pos-hero h3,
+  .preview-homepage .agency-hero h3 { font-size: clamp(16px, 4vw, 25px) !important; letter-spacing: -.6px !important; }
+  .preview-homepage .site-hero-copy p,
+  .preview-homepage .commerce-copy p,
+  .preview-homepage .business-copy p,
+  .preview-homepage .pos-copy p,
+  .preview-homepage .agency-copy p { margin: 6px 0 8px; font-size: 6px; line-height: 1.45; }
+  .preview-homepage .site-button { min-height: 22px; gap: 3px; padding: 0 6px; font-size: 5px; }
+  .preview-homepage .site-note { margin-top: 6px; font-size: 4px; }
+  .restaurant-photo { margin: 6px 6px 6px 0; }
+  .commerce-products { gap: 5px; padding-top: 6px; padding-bottom: 6px; }
+  .commerce-product { font-size: 6px; }
+  .commerce-product img { height: 90px; }
+  .commerce-product span { margin-top: 3px; font-size: 5px; }
+  .business-photo { margin: 6px 6px 6px 0; }
+  .business-stats { gap: 10px; margin-top: 8px; }
+  .business-stats b { font-size: 11px; }
+  .business-stats small { font-size: 4px; }
+  .pos-dashboard { margin: 7px 3% 7px 0; padding: 6px; border-radius: 5px; }
+  .pos-dash-head b { font-size: 7px; }
+  .pos-dash-head span, .pos-chart-heading span { font-size: 5px; }
+  .pos-metrics { gap: 3px; margin-top: 6px; }
+  .pos-metrics > div { gap: 3px; padding: 4px 3px; }
+  .pos-metrics small, .pos-metrics em { font-size: 4px; }
+  .pos-metrics b { font-size: 7px; }
+  .pos-chart-heading { margin-top: 7px; }
+  .pos-chart-heading b { font-size: 6px; }
+  .pos-bars { height: 42px; gap: 3px; margin-top: 5px; padding: 4px 4px 0; }
+  .pos-dash-footer { margin-top: 4px; font-size: 4px; }
+  .agency-art-main { padding: 8px; }
+  .agency-art-side { padding: 5px; }
+  .agency-art-main > span, .agency-art-side > span { font-size: 4px; }
+  .agency-art-main b { font-size: 19px; }
+  .agency-art-side b { font-size: 7px; }
+  .agency-shapes i { width: 13px; height: 13px; }
+  .agency-services { gap: 3px; margin-top: 7px; font-size: 3px; }
+}
+@media (max-width: 380px) {
+  .preview-homepage .site-nav nav { gap: 5px; font-size: 4px; }
+  .preview-homepage .site-nav-cta { padding: 5px 4px; font-size: 4px; }
+  .preview-homepage .site-logo { font-size: 8px; }
+  .preview-homepage .site-hero h3,
+  .preview-homepage .commerce-hero h3,
+  .preview-homepage .business-hero h3,
+  .preview-homepage .pos-hero h3,
+  .preview-homepage .agency-hero h3 { font-size: 16px !important; }
+}

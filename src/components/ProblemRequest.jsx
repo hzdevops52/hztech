@@ -4,12 +4,15 @@ import { ArrowUpRight, CheckCircle2, MessageCircle, Globe } from "lucide-react";
 const WHATSAPP_NUMBER = "923277495256";
 
 const services = [
-  "Website",
-  "Web Application",
+  "Business Websites",
+  "Web Applications",
   "Docker & Deployment",
   "Cloud & Hosting",
   "CI/CD Automation",
   "DevOps & Monitoring",
+  "POS System Design",
+  "Website Redesign",
+  "Mobile-Responsive App Development",
   "Not Sure Yet",
 ];
 
@@ -25,12 +28,12 @@ const websiteNeeds = [
 ];
 
 export default function ProblemRequest() {
-  const [service, setService] = useState("Website");
+  const [service, setService] = useState("Business Websites");
   const [selectedNeeds, setSelectedNeeds] = useState([]);
   const [description, setDescription] = useState("");
   const [contact, setContact] = useState("WhatsApp");
 
-  const needs = service === "Website"
+  const needs = service === "Business Websites"
     ? websiteNeeds
     : [
         `I need a new ${service.toLowerCase()} solution`,
