@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight, ShoppingBag, UtensilsCrossed } from "lucide-react";
+import { ArrowUpRight, ShoppingBag, UtensilsCrossed, Monitor } from "lucide-react";
 
 const projects = [
   {
@@ -31,6 +31,21 @@ const projects = [
     previewLabel: "RESTAURANT WORKFLOW",
     previewTitle: "Orders, organized.",
     previewDetail: "A clearer view of the order-taking experience.",
+  },
+  {
+    id: "retailshop",
+    image: "/images/projects/retailshop.png",
+    name: "HZ Retail POS",
+    category: "RETAIL OPERATIONS",
+    description:
+      "A retail point-of-sale interface for managing sales, inventory, returns, and business reports.",
+    stack: ["POS Interface", "Inventory Management", "Sales & Reports"],
+    url: "https://hzdevops52.github.io/POS_System/",
+    icon: Monitor,
+    previewClass: "work-preview-retailshop",
+    previewLabel: "RETAIL OPERATIONS",
+    previewTitle: "Sales, simplified.",
+    previewDetail: "A clearer view of everyday retail operations.",
   },
 ];
 
