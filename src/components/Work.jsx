@@ -47,6 +47,21 @@ const projects = [
     previewTitle: "Sales, simplified.",
     previewDetail: "A clearer view of everyday retail operations.",
   },
+  {
+    id: "cravory",
+    image: "/images/projects/cravory.png",
+    name: "Cravory",
+    category: "RESTAURANT WEBSITE",
+    description:
+      "A restaurant website showcasing the Cravory dining experience and customer ordering journey.",
+    stack: ["Restaurant Website", "Online Ordering", "Responsive Design"],
+    url: "https://hzdevops52.github.io/cravory_restaurant/",
+    icon: UtensilsCrossed,
+    previewClass: "work-preview-cravory",
+    previewLabel: "RESTAURANT EXPERIENCE",
+    previewTitle: "Good food, beautifully presented.",
+    previewDetail: "Explore the Cravory restaurant website.",
+  },
 ];
 
 function ProjectCard({ project, index }) {
